@@ -1,2 +1,36 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<p class="notice"><%= notice %></p>
+
+<div class="calendar">
+  <h1 class="calendar">朝食記録</h1>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="breakfast">朝食入力</div>
+      <table class="table">
+        <%= form_with model: @post, local: true do |form| %>
+          <div>
+            <%= form.label :title, "タイトル" %>
+            <%= form.text_field :title %>
+          </div>
+
+          <br>
+
+          <div>
+            <%= form.file_field :image %>
+          </div>
+
+          <br>
+
+          <div>
+            <%= form.text_area :content %>
+          </div>
+          <div>
+            <%= form.submit "投稿" %>
+          </div>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
