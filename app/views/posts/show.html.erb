@@ -1,2 +1,7 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>朝食詳細</h1>
+<p>タイトル<%= @post.title %></p>
+<p>メモ・レシピ等<%= @post.content %></p>
+<% if @post.image? %>
+  <p><%= image_tag @post.image.url %></p>
+<% end %>
+<p><%= link_to "朝食記録", posts_path %></p>
