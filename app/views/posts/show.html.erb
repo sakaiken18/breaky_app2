@@ -4,4 +4,5 @@
 <% if @post.image? %>
   <p><%= image_tag @post.image.url %></p>
 <% end %>
+<p>記録日<%= @post.start_time.strftime("%Y-%m-%d") %></p>
 <p><%= link_to "朝食記録", posts_path %></p>

@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, ]
 
   def index
-    @post = Post.new
     @posts = Post.order(id: :asc)
+    @post = Post.new
   end
 
   def show
