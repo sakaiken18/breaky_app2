@@ -20,7 +20,7 @@
         <% if user_signed_in? %>
           <li class="nav-item"><a class="nav-link"><%= link_to "アカウント編集", edit_user_registration_path %></a></li>
           <li class="nav-item"><a class="nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %></a></li>
-          <li class="nav-item"><a class="nav-link"><%= "【ログイン中のアドレス】#{current_user.email}" %></a></li>
+          <li class="nav-item"><a class="nav-link"><%= link_to "朝食記録", posts_path %></a></li>
         <% else %>
           <li class="nav-item"><a class="nav-link"><%= link_to "新規登録", new_user_registration_path %></a></li>
           <li class="nav-item"><a class="nav-link"><%= link_to "ログイン", new_user_session_path %></a></li>
