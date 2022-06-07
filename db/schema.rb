@@ -10,20 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_05_28_125042) do
-=======
-ActiveRecord::Schema.define(version: 2022_05_25_125655) do
->>>>>>> origin/develop
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "posts", force: :cascade do |t|
-=======
-  create_table "calendars", force: :cascade do |t|
->>>>>>> origin/develop
     t.string "title"
     t.string "image"
     t.text "content"
