@@ -31,6 +31,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'erb-formatter'
 gem 'rails-i18n', '~> 6.0'
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
 gem 'simple_calendar', '~> 2.0'
 
 group :development, :test do
