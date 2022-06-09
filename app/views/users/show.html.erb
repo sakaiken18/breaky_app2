@@ -1,4 +1,4 @@
 <% @posts.each do |post| %>
-  <h1><%= link_to post.title, post %></h1>
+  <h1><%= link_to post.title, post %>:<%= post.start_time.strftime("%Y-%m-%d") %></h1>
 <% end %>
 <p><%= link_to "朝食記録", posts_path %></p>
