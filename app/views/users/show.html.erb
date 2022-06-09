@@ -1,0 +1,8 @@
+<%= render "layouts/navber" %>
+<br><br><br>
+
+<h1>朝食投稿一覧</h1>
+<% @posts.each do |post| %>
+  <h1><%= link_to post.title, post %>:<%= post.start_time.strftime("%Y-%m-%d") %></h1>
+<% end %>
+<p><%= link_to "朝食記録", posts_path %></p>

@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, ]
+  before_action :set_post, only: [:show]
 
   def index
-    @posts = Post.order(id: :asc)
+    @posts = Post.where(user_id: current_user.id).includes(:user).all
     @post = Post.new
   end
 
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.create!(post_params)
+    post = current_user.posts.create!(post_params)
     redirect_to post_path(post)
   end
 

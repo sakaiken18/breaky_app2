@@ -1,3 +1,7 @@
+<%= render "layouts/navber" %>
+
+<br><br><br><br>
+
 <p class="notice"><%= notice %></p>
 
 <div class="calendar">
@@ -8,8 +12,8 @@
   <div class="row">
     <div class="col-md-4">
       <div class="breakfast">朝食入力</div>
-      <table class="table">
-        <%= form_with model: @post, local: true do |form| %>
+      <%= form_with model: @post, local: true do |form| %>
+        <table class="table">
           <div>
             <%= form.label :title, "タイトル" %>
             <%= form.text_field :title %>
@@ -36,14 +40,8 @@
           <div>
             <%= form.submit "投稿" %>
           </div>
-        <% end %>
-
-        <%= form_with model: @post, local: true do |form| %>
-          <div>
-
-          </div>
-        <% end %>
-      </table>
+        </table>
+      <% end %>
     </div>
   </div>
   <div class="col-md-8">
