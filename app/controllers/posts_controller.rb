@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show]
 
   def index
-    @posts = Post.order(id: :asc)
+    @posts = Post.where(user_id: current_user.id).includes(:user).all
     @post = Post.new
   end
 
