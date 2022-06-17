@@ -3,6 +3,7 @@
   <div class="row">
     <% @posts.each do |post| %>
       <div class="col-md-4">
+      <div class="content-left">
         <!-- Product image-->
         <% if post.image? %>
           <%= image_tag(post.image.url, class:"card-img-top", alt:"Card image cap") %>
@@ -25,6 +26,7 @@
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
           <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
         </div>
+      </div>
       </div>
     <% end %>
   </div>
