@@ -1,8 +1,32 @@
-<%= render "layouts/navber" %>
+
+  <body>
+  <%= render "layouts/navber" %>
 <br><br><br>
 
-<h1>朝食投稿一覧</h1>
-<% @posts.each do |post| %>
-  <h1><%= link_to post.title, post %>:<%= post.start_time.strftime("%Y-%m-%d") %></h1>
-<% end %>
+
+
 <p><%= link_to "朝食記録", posts_path %></p>
+
+    <!-- Header-->
+    <header class="bg-warning py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">朝ごはん投稿一覧</h1>
+        </div>
+      </div>
+    </header>
+    <%= render "users/post" %>
+    
+    <%= paginate @posts %>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
