@@ -9,4 +9,8 @@
   <p><%= image_tag @post.image.url %></p>
 <% end %>
 <p>記録日<%= @post.start_time.strftime("%Y-%m-%d") %></p>
+<td>
+  <%= link_to "編集", edit_post_path(@post) %>
+  <%= link_to "削除", method: :delete, data: { confirm: "削除しますか？"} %>
+</td>
 <p><%= link_to "朝食記録", posts_path %></p>

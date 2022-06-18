@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.where(user_id: current_user.id).includes(:user).all
@@ -21,6 +21,8 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post.update!(post_params)
+    redirect_to @post
   end
 
   def destroy
