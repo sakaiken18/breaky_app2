@@ -7,7 +7,6 @@
 
 <p><%= link_to "朝食記録", posts_path %></p>
 
-    <!-- Header-->
     <header class="bg-warning py-5">
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
@@ -15,18 +14,19 @@
         </div>
       </div>
     </header>
+
     <%= render "users/post" %>
     
     <%= paginate @posts %>
-    <!-- Footer-->
+    
     <footer class="py-5 bg-dark">
       <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
     </footer>
-    <!-- Bootstrap core JS-->
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     ></script>
-    <!-- Core theme JS-->
+    
     <script src="js/scripts.js"></script>
   </body>
 </html>
