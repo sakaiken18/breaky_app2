@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.where(user_id: current_user.id).includes(:user).all
@@ -34,10 +35,14 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
-      unless @post.user == current_user
-        redirect_to post_path(@post)
-      end
   end
+
+  def ensure_user
+    unless @post.user == current_user
+        redirect_to root_path
+    end
+  end
+
 
   def post_params
     params.require(:post).permit(:title, :image, :content, :start_time).merge(user_id: current_user.id)

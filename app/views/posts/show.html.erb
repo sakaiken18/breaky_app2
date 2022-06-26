@@ -10,7 +10,7 @@
 <% end %>
 <p>記録日<%= @post.start_time.strftime("%Y-%m-%d") %></p>
 <td>
-  <% if @post.user.id == current_user.id %>
+  <% if @post.user_id == current_user.id %>
     <%= link_to "編集", edit_post_path(@post) %>
     <%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？"} %>
     <p><%= link_to "朝食記録", posts_path %></p>
