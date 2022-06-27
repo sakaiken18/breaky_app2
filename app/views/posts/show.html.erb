@@ -2,8 +2,9 @@
 
 <br><br><br><br>
 
-<h1>朝食詳細</h1>
-<p>タイトル<%= @post.title %></p>
+<h1>朝ごはん詳細</h1>
+<p><%= @post.user.nickname.present? ? "投稿者： #{@post.user.nickname}" : "投稿者：名無しさん" %></p>
+<p>タイトル：<%= @post.title %></p>
 <p>メモ・レシピ等<%= @post.content %></p>
 <% if @post.image? %>
   <p><%= image_tag @post.image.url %></p>
