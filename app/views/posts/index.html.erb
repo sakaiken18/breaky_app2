@@ -3,9 +3,14 @@
 <br><br><br><br>
 
 <p class="notice"><%= notice %></p>
-
+<header class="bg-warning py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder">朝ごはん記録</h1>
+    </div>
+  </div>
+</header>
 <div class="calendar">
-  <h1 class="calendar">朝食記録</h1>
 
   <br>
 
@@ -14,10 +19,9 @@
       <%= render "form", button_value: "投稿" %>
     </div>
   </div>
-  <div class="col-md-8">
+  <div class="col-md-9 col-sm-12 col-xs-12">
     <%= month_calendar events: @posts do |date,posts| %>
       <%= date.day %>
-
       <% posts.each do |post| %>
         <div>
           <%= link_to post.title, post %>
