@@ -1,25 +1,24 @@
-<div class="breakfast">朝食入力</div>
-  <%= form_with model: @post, local: true do |form| %>
-    <table class="table">
-      <div>
-        <%= form.label :title, "タイトル" %>
-        <%= form.text_field :title %>
-      </div
-      <br>
-      <div>
-        <%= form.file_field :image, :accept => 'image/*' %>
-      </div
-      <br>
-      <div>
-        <%= form.text_area :content %>
-      </div
-      <br>
-      <div>
-        <%= form.label :start_time, "記録日" %>
-        <%= form.date_field :start_time %>
-      </div>
-      <div>
-        <%= form.submit button_value %>
-      </div>
-    </table>
-  <% end %>
+<h2 class="breakfast">朝ごはん入力</h2>
+<%= form_with model: @post, local: true do |form| %>
+  <table class="field row">
+    <div>
+      <%= form.label :title, "タイトル" %>
+      <p><%= form.text_field :title %></p>
+    </div>
+    <div>
+      <%= form.label :image, "写真" %>
+      <p><%= form.file_field :image, :accept => 'image/*' %></p>
+    </div>
+    <div>
+      <%= form.label :content, "レシピ・メモ" %>
+      <p><%= form.text_area :content %></p>
+    </div>
+    <div>
+      <%= form.label :start_time, "記録日" %>
+      <p><%= form.date_field :start_time %></p>
+    </div>
+    <div>
+      <%= form.submit button_value %>
+    </div>
+  </table>
+<% end %>
