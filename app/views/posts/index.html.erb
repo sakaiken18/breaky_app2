@@ -1,23 +1,10 @@
 <%= render "layouts/navber" %>
 
 <br><br><br><br>
-
-<p class="notice"><%= notice %></p>
-<header class="bg-warning py-5">
-  <div class="container px-4 px-lg-5 my-5">
-    <div class="text-center text-white">
-      <h1 class="display-4 fw-bolder">朝ごはん記録</h1>
-    </div>
-  </div>
-</header>
-<div class="calendar">
-
-  <br>
-
-  <div class="row">
-    <div class="col-md-4">
-      <%= render "form", button_value: "投稿" %>
-    </div>
+<div class="container-fluid">
+  <h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span>MYトレーニングメモ</h2>
+  <div class="col-md-3 col-sm-12 col-xs-12">
+    <%= render "form", button_value: "投稿" %>
   </div>
   <div class="col-md-9 col-sm-12 col-xs-12">
     <%= month_calendar events: @posts do |date,posts| %>
@@ -29,3 +16,4 @@
       <% end %>
     <% end %>
   </div>
+</div>

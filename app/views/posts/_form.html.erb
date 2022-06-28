@@ -1,6 +1,5 @@
-<h2 class="breakfast">朝ごはん入力</h2>
 <%= form_with model: @post, local: true do |form| %>
-  <table class="field row">
+  <div class="field row">
     <div>
       <%= form.label :title, "タイトル" %>
       <p><%= form.text_field :title %></p>
@@ -20,5 +19,5 @@
     <div>
       <%= form.submit button_value %>
     </div>
-  </table>
+  </div>
 <% end %>
