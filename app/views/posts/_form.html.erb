@@ -1,23 +1,21 @@
 <%= form_with model: @post, local: true do |form| %>
-  <div class="field row">
-    <div>
-      <%= form.label :title, "タイトル" %>
-      <p><%= form.text_field :title %></p>
-    </div>
-    <div>
-      <%= form.label :image, "写真" %>
-      <p><%= form.file_field :image, :accept => 'image/*' %></p>
-    </div>
-    <div>
-      <%= form.label :content, "レシピ・メモ" %>
-      <p><%= form.text_area :content %></p>
-    </div>
-    <div>
-      <%= form.label :start_time, "記録日" %>
-      <p><%= form.date_field :start_time %></p>
-    </div>
-    <div>
-      <%= form.submit button_value %>
-    </div>
+  <div>
+    <%= form.label :title, "タイトル" %>
+    <p><%= form.text_field :title %></p>
+  </div>
+  <div class="actions row">
+    <%= form.label :image, "写真" %>
+    <p><%= form.file_field :image, :accept => 'image/*' %></p>
+  </div>
+  <div class="actions row">
+    <%= form.label :content, "レシピ・メモ" %>
+    <p><%= form.text_area :content %></p>
+  </div>
+  <div>
+    <%= form.label :start_time, "記録日" %>
+    <p><%= form.date_field :start_time %></p>
+  </div>
+  <div class="actions row">
+    <%= form.submit button_value %>
   </div>
 <% end %>
