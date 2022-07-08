@@ -1,0 +1,30 @@
+
+  <body>
+  <%= render "layouts/navber" %>
+<br><br><br>
+
+
+    <header class="bg-warning py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">マイページ</h1>
+          <h2>朝ごはん投稿一覧</h2>
+        </div>
+      </div>
+    </header>
+
+    <%= render "users/post" %>
+    
+    <%= paginate @posts %>
+    
+    <footer class="py-5 bg-dark">
+      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+    </footer>
+    
+    <script
+      src="https://cdn.delivr.net/npm/bootstrap@5.1.3/dist//bootstrap.bundle.min."
+    ></script>
+    
+    <script src="/scripts."></script>
+  </body>
+</html>
