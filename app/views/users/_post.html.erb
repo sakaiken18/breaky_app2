@@ -1,31 +1,31 @@
-<section class="py-5">
-
+<div class="posts_card">
   <div class="row">
-    <% @posts.each do |post| %>
-      <div class="col md-4">
-        <div class="card h-100">
-          <div class="content-left">
-            <% if post.image? %>
-              <%= image_tag(post.image.url, class:"card-img-top", alt:"Card image cap") %>
-            <% else %>
-              <img
-                class="card-img-top"
-                src="https://placehold.jp/b5b5ba/3e3d3d/450x300.jpg?text=No%20image"
-                alt="..."
-              />
-            <% end %>
+    <div class="grid">
+      <% @posts.each do |post| %>
+        <div class="col md-4">
+          <div class="card content-card border-dark mb-3">
+            <div class="card-body">
+              <% if post.image? %>
+                <%= image_tag(post.image.url, class:"card-img-top", alt:"Card image cap") %>
+              <% else %>
+                <img
+                  class="card-img-top"
+                  src="https://placehold.jp/b5b5ba/3e3d3d/450x340.jpg?text=No%20image"
+                  alt="..."
+                />
+              <% end %>
 
-            <div class="card-body p-4">
-              <div class="text-center">
-                <h5 class="fw-bolder"><%= link_to post.title, post %></h5>
-                <p><%= post.start_time.strftime("%Y年%m月%d日") %></p>
-                <p><%= post.user.nickname.present? ? "投稿者： #{post.user.nickname}" : "投稿者：名無しさん" %></p>
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <h5 class="fw-bolder"><%= link_to post.title, post %></h5>
+                  <p><%= post.start_time.strftime("%Y年%m月%d日") %></p>
+                  <p><%= post.user.nickname.present? ? "投稿者： #{post.user.nickname}" : "投稿者：名無しさん" %></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-
-</section>
+</div>
