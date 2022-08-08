@@ -8,8 +8,7 @@
     <p><%= form.file_field :image, :accept => 'image/*' %></p>
   </div>
   <div class="actions row">
-    <%= form.label :content, "レシピ・メモ" %>
-    <p><%= form.text_area :content %></p>
+    <p><%= form.text_area :content, :placeholder => "レシピ・メモ" %></p>
   </div>
   <div>
     <%= form.label :start_time, "記録日" %>
