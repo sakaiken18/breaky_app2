@@ -1,11 +1,9 @@
 <%= form_with model: @post, local: true do |form| %>
   <div>
-    <%= form.label :title, "タイトル" %>
-    <p><%= form.text_field :title %></p>
+    <label><%= form.text_field :title, :placeholder => "タイトル" %></label>
   </div>
-  <div class="actions row">
-    <%= form.label :image, "写真" %>
-    <p><%= form.file_field :image, :accept => 'image/*' %></p>
+  <div class="imagebutton">
+    <label><%= form.file_field :image, :accept => 'image/*' %></label>
   </div>
   <div class="actions row">
     <p><%= form.text_area :content, :placeholder => "レシピ・メモ" %></p>
@@ -14,7 +12,9 @@
     <%= form.label :start_time, "記録日" %>
     <p><%= form.date_field :start_time %></p>
   </div>
-  <div class="actions row">
-    <%= form.submit button_value %>
+  <div class="formbutton">
+    <div class="btns submit">
+      <%= form.submit button_value %>
+    </div>
   </div>
 <% end %>
