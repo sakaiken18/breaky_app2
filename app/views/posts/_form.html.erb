@@ -3,7 +3,7 @@
     <label><%= form.text_field :title, :placeholder => "タイトル" %></label>
   </div>
   <div class="imagebutton">
-    <label><%= form.file_field :image, :accept => 'image/*' %></label>
+    <label class="sized"><%= form.file_field :image, :accept => 'image/*' %></label>
   </div>
   <div class="actions row">
     <p><%= form.text_area :content, :placeholder => "レシピ・メモ" %></p>
