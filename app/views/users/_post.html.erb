@@ -6,7 +6,7 @@
           <div class="card content-card border-dark mb-3">
             <div class="card-body">
               <% if post.image? %>
-                <%= image_tag(post.image.url, class:"card-img-top", alt:"Card image cap") %>
+                <%= image_tag(post.image.to_s, size: "100x210", class:"card-img-top", alt:"Card image cap") %>
               <% else %>
                 <img
                   class="card-img-top"
