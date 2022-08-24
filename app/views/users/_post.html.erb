@@ -8,11 +8,7 @@
               <% if post.image? %>
                 <%= image_tag(post.image.to_s, size: "100x210", class:"card-img-top", alt:"Card image cap") %>
               <% else %>
-                <img
-                  class="card-img-top"
-                  src="https://placehold.jp/b5b5ba/3e3d3d/450x340.jpg?text=No%20image"
-                  alt="..."
-                />
+                <img class="card-img-top" src="/assets/noimage.jpg" alt="...">
               <% end %>
 
               <div class="card-body p-4">
