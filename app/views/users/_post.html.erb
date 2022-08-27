@@ -1,14 +1,18 @@
-<div class="posts_card">
-  <div class="row">
-    <div class="grid">
-      <% @posts.each do |post| %>
+<div class="posts_card h-100 w-60">
+  <div class="grid">
+    <% @posts.each do |post| %>
+      <div class="row">
         <div class="col md-4">
           <div class="card content-card border-dark mb-3">
             <div class="card-body">
               <% if post.image? %>
-                <%= image_tag(post.image.to_s, size: "100x210", class:"card-img-top", alt:"Card image cap") %>
+                <%= image_tag(post.image.url, class:"card-img-top", alt:"Card image cap") %>
               <% else %>
-                <img class="card-img-top" src="/assets/noimage.jpg" alt="...">
+                <img
+                  class="card-img-top"
+                  src="https://placehold.jp/b5b5ba/3e3d3d/450x340.jpg?text=No%20image"
+                  alt="..."
+                />
               <% end %>
 
               <div class="card-body p-4">
@@ -21,7 +25,7 @@
             </div>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
