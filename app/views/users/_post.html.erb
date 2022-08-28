@@ -20,6 +20,13 @@
                   <h5 class="fw-bolder"><%= link_to post.title, post %></h5>
                   <p><%= post.start_time.strftime("%Y年%m月%d日") %></p>
                   <p><%= post.user.nickname.present? ? "投稿者： #{post.user.nickname}" : "投稿者：名無しさん" %></p>
+                  <% if user_signed_in? && current_user == post.user %>
+                    <% if current_user.completed_find(post.id) %>
+                      <%= link_to '残しちゃった！', destroy_completed_path(post.id), method: :delete %>
+                    <% else %>
+                      <%= link_to '完食', create_completed_path(post.id), method: :post %>
+                    <% end %>
+                  <% end %>
                 </div>
               </div>
             </div>
