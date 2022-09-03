@@ -6,5 +6,7 @@ class CreateCompleteds < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+
+    add_index :completeds, [:user_id, :post_id], unique: true
   end
 end

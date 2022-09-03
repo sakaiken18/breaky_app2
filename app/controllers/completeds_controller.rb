@@ -1,13 +1,17 @@
 class CompletedsController < ApplicationController
+  before_action :post_find
 
   def create
-    Completed.create(user_id: current_user.id, post_id: params[:id])
-    redirect_to root_path
+    current_user.completeds.create!(post_id: params[:post_id])
   end
 
   def destroy
-    completed = Completed.find_by(user_id: current_user.id, post_id: params[:id])
-    completed.destroy
-    redirect_to root_path
+    current_user.completeds.find_by(post_id: params[:post_id]).destroy!
+  end
+
+  private
+
+  def post_find
+    @post = Post.find(params[:post_id])
   end
 end
