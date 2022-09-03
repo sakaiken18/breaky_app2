@@ -20,6 +20,15 @@
                   <h5 class="fw-bolder"><%= link_to post.title, post %></h5>
                   <p><%= post.start_time.strftime("%Y年%m月%d日") %></p>
                   <p><%= post.user.nickname.present? ? "投稿者： #{post.user.nickname}" : "投稿者：名無しさん" %></p>
+                  <p id="post-<%= post.id %>">
+                    <% if user_signed_in? && current_user == post.user %>
+                      <% if post.completed_by?(current_user) %>
+                        <%= render 'users/completed', post: post %>
+                      <% else %>
+                        <%= render 'users/incompleted', post: post %>
+                      <% end %>
+                    <% end %>
+                  </p>
                 </div>
               </div>
             </div>

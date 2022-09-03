@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'completeds/create'
+  get 'completeds/destroy'
   get 'mypage/show'
   root 'top#index'
   devise_for :users, controllers: {
@@ -14,4 +16,7 @@ Rails.application.routes.draw do
   resource :users, only: :show
   resource :mypage, only: :show
   resource :top, only: :index
+  resources :posts do
+    resource :completeds, only: [:create, :destroy]
+  end
 end
