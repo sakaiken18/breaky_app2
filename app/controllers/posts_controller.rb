@@ -15,7 +15,12 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create!(post_params)
-    redirect_to post_path(@post)
+    if @post.save
+      redirect_to post_path(@post)
+    else
+      render "posts/index"
+    end
+    
   end
 
   def edit
@@ -23,7 +28,11 @@ class PostsController < ApplicationController
 
   def update
     @post.update!(post_params)
-    redirect_to @post
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render "edit"
+    end
   end
 
   def destroy
