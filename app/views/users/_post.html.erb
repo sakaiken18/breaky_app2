@@ -1,7 +1,7 @@
-<div class="posts_card h-100 w-60">
+<div class="posts_card h-150 w-60">
   <div class="grid">
     <% @posts.each do |post| %>
-      <div class="row">
+      <div class="row row-eq-height">
         <div class="col md-4">
           <div class="card content-card border-dark mb-3">
             <div class="card-body">
@@ -27,6 +27,9 @@
                       <% else %>
                         <%= render 'users/incompleted', post: post %>
                       <% end %>
+                    <% else %>
+                      <p>&emsp;
+                      </p>
                     <% end %>
                   </p>
                 </div>
