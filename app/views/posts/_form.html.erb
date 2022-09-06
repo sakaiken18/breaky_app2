@@ -1,4 +1,5 @@
 <%= form_with model: @post, local: true do |form| %>
+  <%= render 'layouts/errors_messages', model: form.object %>
   <div>
     <label><%= form.text_field :title, :placeholder => "タイトル" %></label>
   </div>
@@ -10,7 +11,7 @@
   </div>
   <div>
     <%= form.label :start_time, "記録日" %>
-    <p><%= form.date_field :start_time %></p>
+    <p><%= form.date_field :start_time, value: Time.now.strftime("%Y-%m-%d") %></p>
   </div>
   <div class="formbutton">
     <div class="btns submit">
