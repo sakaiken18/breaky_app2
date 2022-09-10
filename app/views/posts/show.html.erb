@@ -1,21 +1,22 @@
 <%= render "layouts/navber" %>
 
 <br><br><br><br>
-
-<h1 class="text-center">朝ごはん詳細</h1>
-<p><%= @post.user.nickname.present? ? "投稿者： #{@post.user.nickname}" : "投稿者：名無しさん" %></p>
-<p>タイトル：<%= @post.title %></p>
-<p>メモ・レシピ等<%= @post.content %></p>
-<% if @post.image? %>
-  <p><%= image_tag @post.image.to_s, size: "400x300" %></p>
-<% end %>
-<p>記録日<%= @post.start_time.strftime("%Y-%m-%d") %></p>
-<td>
-  <% if @post.user_id == current_user.id %>
-    <%= link_to "編集", edit_post_path(@post) %>
-    <%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？"} %>
-    <p><%= link_to "朝食記録", posts_path %></p>
-  <% else %>
-    <p><%= link_to "朝食記録", posts_path %></p>
+<div class="text-center">
+  <h1 class="text-center">朝ごはん詳細</h1>
+  <p><%= @post.user.nickname.present? ? "投稿者： #{@post.user.nickname}" : "投稿者：名無しさん" %></p>
+  <p>タイトル：<%= @post.title %></p>
+  <p>メモ・レシピ等<%= @post.content %></p>
+  <% if @post.image? %>
+    <p><%= image_tag @post.image.to_s, size: "400x300" %></p>
   <% end %>
-</td>
+  <p>記録日<%= @post.start_time.strftime("%Y-%m-%d") %></p>
+  <td>
+    <% if @post.user_id == current_user.id %>
+      <%= link_to "編集", edit_post_path(@post) %>
+      <%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？"} %>
+      <p><%= link_to "朝食記録", posts_path %></p>
+    <% else %>
+      <p><%= link_to "朝食記録", posts_path %></p>
+    <% end %>
+  </td>
+</div>
