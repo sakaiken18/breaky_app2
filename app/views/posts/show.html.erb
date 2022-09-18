@@ -7,7 +7,7 @@
   <p>タイトル：<%= @post.title %></p>
   <p>メモ・レシピ等<%= @post.content %></p>
   <% if @post.image? %>
-    <p><%= image_tag @post.image.to_s, size: "400x300" %></p>
+    <p><%= image_tag @post.image.to_s, size: "400x450" %></p>
   <% end %>
   <p>記録日<%= @post.start_time.strftime("%Y-%m-%d") %></p>
   <td>
