@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :completeds, dependent: :destroy
   mount_uploader :image, ImageUploader
   validates :start_time, presence: true
+  validates :title, presence: true
   
   def completed_by?(user)
     completeds.exists?(user_id: user.id)

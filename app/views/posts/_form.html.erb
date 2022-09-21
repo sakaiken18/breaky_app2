@@ -1,17 +1,17 @@
 <%= form_with model: @post, local: true do |form| %>
-  <%= render 'layouts/errors_messages', model: form.object %>
+  <%= render 'layouts/errors_messages', post: form.object %>
   <div>
-    <label><%= form.text_field :title, :placeholder => "タイトル" %></label>
+    <label><%= form.text_field :title, :placeholder => "タイトル(入力必須)" %></label>
   </div>
   <div class="imagebutton">
     <label class="sized"><%= form.file_field :image, :accept => 'image/*' %></label>
   </div>
   <div class="actions row">
-    <p><%= form.text_area :content, :placeholder => "レシピ・メモ" %></p>
+    <p><%= form.text_area :content, :placeholder => "レシピ・メモ(入力自由)" %></p>
   </div>
   <div>
-    <%= form.label :start_time, "記録日" %>
-    <p><%= form.date_field :start_time, value: Time.now.strftime("%Y-%m-%d") %></p>
+    <%= form.label :start_time, "記録日(入力必須)" %>
+    <p><%= form.date_field :start_time %></p>
   </div>
   <div class="formbutton">
     <div class="btns submit">
