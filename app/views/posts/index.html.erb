@@ -13,7 +13,7 @@
         <%= date.day %>
         <% posts.each do |post| %>
           <div class="title-font">
-            <%= link_to post.title, post %>
+            <%= link_to post.title, post, class:"link" %>
           </div>
           <p id="post-<%= post.id %>">
             <% if user_signed_in? && current_user == post.user %>
