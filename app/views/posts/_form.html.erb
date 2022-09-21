@@ -1,5 +1,5 @@
 <%= form_with model: @post, local: true do |form| %>
-  <%= render 'layouts/errors_messages', model: form.object %>
+  <%= render 'layouts/errors_messages', post: form.object %>
   <div>
     <label><%= form.text_field :title, :placeholder => "タイトル" %></label>
   </div>
