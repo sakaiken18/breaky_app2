@@ -4,5 +4,5 @@
 毎朝の朝ごはんを記録・共有するアプリです。
 
 ## URL
-[BreakyApp](https://breaky-app-030618.herokuapp.com/)   
+<a href="https://breaky-app-030618.herokuapp.com/" target="_blank" rel="noopener noreferrer">Breaky -朝ごはん記録-</a>    
 トップページのMENUからゲストログイン可能です。
