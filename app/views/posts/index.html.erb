@@ -12,7 +12,7 @@
       <%= month_calendar events: @posts do |date,posts| %>
         <%= date.day %>
         <% posts.each do |post| %>
-          <div>
+          <div class="title-font">
             <%= link_to post.title, post %>
           </div>
           <p id="post-<%= post.id %>">
