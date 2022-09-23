@@ -80,3 +80,23 @@
 - ソースコード管理:GitHub
 - 開発環境：MacOS/VisualStudioCode
 
+
+## 機能一覧
+- ログイン・ログアウト機能（devise)
+- ユーザー登録・編集機能(devise)
+- 日本語化（rails-i18n)
+- レスポンシブデザイン（Bootstrap）
+- 画像投稿（carrierwave/mini-magick)
+- カレンダー機能（simple_calender)
+- ページネーション（kaminari)
+- 非同期処理（JavaScript）
+- フォーマッター（Rubocop)
+
+
+## 追加予定機能
+- 完食ボタンを押したときにイベント発生機能
+- AWSにデプロイ
+- テストコード
+
+
+
