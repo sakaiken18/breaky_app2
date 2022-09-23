@@ -71,5 +71,12 @@
 > 2.子供も参加型のアプリにしてほしい
 >> 当初は朝ごはんを投稿・共有・記録するだけのアプリだったが、妻からのフィードバックを受け、完食ボタン❤️を追加しました。
 
-
+## 使用技術
+- 言語：Ruby(3.0.2)
+- フレームワーク:Ruby on Rails(6.1.6)
+- フロントエンド：HTML/Scss/JavaScript
+- DB:PostgreSQL
+- インフラ：heroku + AWS(S3)
+- ソースコード管理:GitHub
+- 開発環境：MacOS/VisualStudioCode
 
