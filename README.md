@@ -46,6 +46,7 @@
 
 
 ### ②朝ごはん記録・カレンダー
+![calender](https://media.giphy.com/media/bcwJ5DrAwVzDmS6yna/giphy.gif)
 - ページ上部の投稿フォームにて朝ごはんを投稿。（タイトル・記録日は入力必須です）
 - ページ下部のカレンダーに投稿した日にちに朝ごはんタイトルと完食ボタン❤️が表示される。
 
@@ -58,6 +59,7 @@
 
 
 ### ④朝ごはん投稿一覧画面
+![post-index](https://media.giphy.com/media/o7BxFF6GyaYtVdBoyf/giphy.gif)
 - 他のユーザーが投稿した朝ごはんが一覧で表示される。
 
 
