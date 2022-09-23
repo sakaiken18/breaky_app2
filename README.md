@@ -51,6 +51,7 @@
 
 
 ### ③マイページ
+![mypage](https://media.giphy.com/media/6JUs21OnNo3hoe97AL/giphy.gif)
 - 自分の投稿した朝ごはんの一覧が表示される
 - 朝ごはんタイトルをクリックすると朝ごはん詳細画面を遷移する
 - 詳細画面で編集・削除ができる。
